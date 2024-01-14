@@ -45,7 +45,7 @@ document.querySelector(".btn-hold").addEventListener("click",function(){
 
 
     //ug toglogch hojson esehiig shalgah
-    if(scores[activePlayer] >= 10)
+    if(scores[activePlayer] >= 100)
     {
         isGameOver = true;
 
