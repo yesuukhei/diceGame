@@ -46,6 +46,31 @@ document.querySelector(".btn-roll").addEventListener("click", function(){
         //ulaan tsegiig shiljuuleh
         document.querySelector(".player-0-panel").classList.toggle("active");
         document.querySelector(".player-1-panel").classList.toggle("active");
+        
     }
+
+})
+
+// HOLD tovchni eventListener
+
+document.querySelector(".btn-hold").addEventListener("click",function(){
+    // ug toglogchin tsugluulsan eeljnii onoog global onoon deer ni nemeh
+    scores[activePlayer] += roundScore;
+
+    document.getElementById("score-" + activePlayer).textContent = scores[activePlayer];
+
+    //eeljin onoog 0 bolgoh
+    roundScore = 0;
+    document.getElementById("current-" + activePlayer).textContent = 0;
+
+    //toglogchiin eeljig solih
+    diceDom.style.display = "none";
+
+    (activePlayer === 0) ? activePlayer = 1 : activePlayer = 0;
+
+    document.querySelector(".player-0-panel").classList.toggle("active");
+        document.querySelector(".player-1-panel").classList.toggle("active");
+
+
 
 })
